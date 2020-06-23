@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TransactionsService } from 'app/services/transactions.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  encapsulation: ViewEncapsulation.None  // Use to disable CSS Encapsulation for this component
+
 })
 export class DashboardComponent implements OnInit {
   navItems: { displayText: string; iconPath: string; anchorLink: string; }[];

@@ -7,23 +7,23 @@
     </div>
 <div class="list-container">
     <ul class="card-list">
-        <li>
+        <li *ngFor="let ship of ships">
             <div class="card-list-item">
                 <div class="status-icon-container">
-                    <span class="status-icon"></span>
+                    <span class="status-icon launching-class"></span>
                 </div>
                 <div class="row flex-grow-1">
-                    <div class="col-md-5">
+                    <div class="col-md-5 flex-grow-1 d-flex">
                         <div class="item-section-container">
-                            <p class="value">VPN Server</p>
+                            <p class="value">{{ship.name}}</p>
                             <span class="label">
                                 NAME
                             </span>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 flex-grow-1 d-flex">
                         <div class="item-section-container">
-                            <p class="value status-text-success">Orbiting</p>
+                            <p class="value status-text-success">{{ship.status}}</p>
                             <span class="label">
                                 STATUS
                             </span>

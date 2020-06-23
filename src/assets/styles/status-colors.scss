@@ -1,0 +1,41 @@
+.inactive-bg {
+    background: red !important;
+}
+
+.launching-bg {
+    background: $vibrant-sky-blue !important;
+}
+
+.landing-bg {
+    background: $vibrant-sky-blue !important;
+}
+
+.orbit-bg {
+    background: $vibrant-green !important;
+}
+
+.abort-bg {
+    background: red !important;
+}
+
+// text
+
+.inactive-text {
+    color: red !important;
+}
+
+.launching-text {
+    color: $vibrant-sky-blue !important;
+}
+
+.landing-text {
+    color: $vibrant-sky-blue !important;
+}
+
+.orbit-text {
+    color: $vibrant-green !important;
+}
+
+.abort-text {
+    color: red !important;
+}

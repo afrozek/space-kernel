@@ -11,6 +11,7 @@ import { DashboardSidebarComponent } from './components/dashboard/components/das
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionsComponent } from './components/transactions/transactions.component';
+import { ShipListComponent } from './components/dashboard/components/ship-list/ship-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TransactionsComponent } from './components/transactions/transactions.co
     SignupComponent,
     DashboardComponent,
     DashboardSidebarComponent,
-    TransactionsComponent
+    TransactionsComponent,
+    ShipListComponent
   ],
   imports: [
     BrowserModule,
