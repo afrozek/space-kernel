@@ -15,7 +15,8 @@ export class ShipsService {
   getShips() {
 
     const mappedWithStatusObject = ships.map(ship => {
-      return ship.statusObject = statusMap[ship.statusCode]
+       ship.statusObject = statusMap[ship.statusCode];
+       return ship;
     })
 
     let fakeObservable = of(mappedWithStatusObject).pipe(delay(1000));
