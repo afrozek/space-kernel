@@ -193,13 +193,23 @@
     // color: $gray-text;
     // padding-left: 100px;
     height: 60px;
+    font-size: 12px;
+    font-family: Montserrat-Regular;
 
     .navbar-brand {
-        background: rgba(255,255,255,0.16);
+        // background: rgba(255,255,255,0.16);
+        width: 200px;
     }
 
     .nav-link {
-        // color: white;
+        color: $gray-text;
+        font-family: Montserrat-Regular;
+        -webkit-font-smoothing: antialiased;
+
+        &:hover {
+            color: white;
+        }
+
     }
 
     #navbarSupportedContent {
@@ -339,7 +349,9 @@
 }
 
 .dash-content-container {
+
     padding: 20px 15px;
+    padding-top: 60px;
 }
 
 .dash-card {
