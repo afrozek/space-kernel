@@ -29,12 +29,14 @@
     }
 }
 
-.list-container {
+
+
+.glowing-corners-bg {
     background-image: 
       url('/assets/images/top-corner-glow.png'), url('/assets/images/bottom-corner-glow.png');
   background-position: left top, right bottom;
   background-repeat: no-repeat, no-repeat;
-  min-height: 300px;
+  min-height: 70px;
   padding: 14px;
 }
 
@@ -55,9 +57,9 @@
         align-items: center;
         border-radius: 10px;
         background: $dark-pale-purple;
+        background: linear-gradient(180deg, rgba(36,31,53,1) 0%, rgba(22,22,22,1) 300%);
         padding: 10px 14px;
         min-height: 60px;
-        
     }
 }
 
@@ -92,13 +94,35 @@
         color: $light-gray;
     }
 
-    .status-text-success {
-        color: $vibrant-green;
+    .status-text {
         text-transform: uppercase;
         font-size: 10px;
     }
     
 
+}
+
+
+#ship-container {
+    display: flex;
+    justify-content: center;
+
+    img {
+        max-width: 300px;
+        align-self: center;
+    }
+}
+
+.detail-card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 14px;
+    min-height: 300px;
+    background: url("/assets/images/planet-faded-bg.png"), linear-gradient(180deg, rgba(36,31,53,1) 0%, rgba(22,22,22,1) 100%);
+    background-repeat: no-repeat;
+    background-position-x: 80px, center;
+    background-position-y: 80px, center;
 }
 
 

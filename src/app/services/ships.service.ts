@@ -10,17 +10,21 @@ import { delay, map } from 'rxjs/operators';
 })
 export class ShipsService {
 
-  constructor() { }
+  ships: [];
+
+  constructor() { 
+    this.ships = [];
+    this.mapShipStatuses();
+  }
+
+  mapShipStatuses() {
+    this.ships = ships.map(ship => {
+      ship.statusObject = statusMap[ship.statusCode];
+      return ship;
+   })
+  }
 
   getShips() {
-
-    const mappedWithStatusObject = ships.map(ship => {
-       ship.statusObject = statusMap[ship.statusCode];
-       return ship;
-    })
-
-    let fakeObservable = of(mappedWithStatusObject).pipe(delay(1000));
-    return fakeObservable;
-
+   return of(this.ships).pipe(delay(2000));
  }
 }

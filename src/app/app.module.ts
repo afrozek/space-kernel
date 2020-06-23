@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ShipListComponent } from './components/dashboard/components/ship-list/ship-list.component';
+import { ShipDetailComponent } from './components/dashboard/components/ship-detail/ship-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ShipListComponent } from './components/dashboard/components/ship-list/s
     DashboardComponent,
     DashboardSidebarComponent,
     TransactionsComponent,
-    ShipListComponent
+    ShipListComponent,
+    ShipDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,13 @@
         </div>
         <h3>Your Ships.</h3>
     </div>
-<div class="list-container">
+<div class="list-container glowing-corners-bg">
+    <p *ngIf="loadingShips">receiving transmission..</p>
     <ul class="card-list">
         <li *ngFor="let ship of ships">
             <div class="card-list-item">
                 <div class="status-icon-container">
-                    <span class="status-icon launching-class"></span>
+                    <span class="status-icon" [ngClass]="ship.statusObject.bgClass"></span>
                 </div>
                 <div class="row flex-grow-1">
                     <div class="col-md-5 flex-grow-1 d-flex">
@@ -23,7 +24,7 @@
                     </div>
                     <div class="col-md-5 flex-grow-1 d-flex">
                         <div class="item-section-container">
-                            <p class="value status-text-success">{{ship.status}}</p>
+                            <p class="value status-text" [ngClass]="ship.statusObject.textClass">{{ship.statusObject.name}}</p>
                             <span class="label">
                                 STATUS
                             </span>

@@ -8,6 +8,7 @@ import { ShipsService } from 'app/services/ships.service';
 })
 export class ShipListComponent implements OnInit {
   ships: any;
+  loadingShips: boolean;
 
 
   constructor(private _shipsService: ShipsService) { }
@@ -17,8 +18,10 @@ export class ShipListComponent implements OnInit {
   }
 
   getShipsList() {
+    this.loadingShips = true;
     this._shipsService.getShips().subscribe((data)=>{
       this.ships = data;
+      this.loadingShips = false;
       console.log(this.ships)
     })
   }
