@@ -108,21 +108,59 @@
     justify-content: center;
 
     img {
-        max-width: 300px;
+        max-width: 270px;
         align-self: center;
     }
 }
 
 .detail-card {
     display: flex;
-    align-items: center;
+    // align-items: center;
     border-radius: 10px;
-    padding: 10px 14px;
-    min-height: 300px;
+    padding: 25px;
+    min-height: 200px;
     background: url("/assets/images/planet-faded-bg.png"), linear-gradient(180deg, rgba(36,31,53,1) 0%, rgba(22,22,22,1) 100%);
     background-repeat: no-repeat;
     background-position-x: 80px, center;
-    background-position-y: 80px, center;
+    background-position-y: 50px, center;
+}
+
+.detail-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 14px;
+    border-left: 1px solid $gray-text;
+
+    li {
+        position: relative;
+    }
+    
+    .hollow-bullet {
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+        background: $dark-pale-purple;
+        border: 1px solid $purple;
+        position: absolute;
+        left: -18px;
+        top: 8px;    
+    }
+
+    .label {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: $purple;
+    }
+
+    .value {
+        font-size: 12px;
+        color: $gray-text;
+    }
+
+
+
 }
 
 
@@ -152,7 +190,7 @@
     width: 100%;
     z-index: 99;
     // background: $primary-blue;
-    // color: white;
+    // color: $gray-text;
     // padding-left: 100px;
     height: 60px;
 
